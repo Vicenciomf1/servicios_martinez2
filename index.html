@@ -14,40 +14,51 @@
 <body>
     <!-- En esta parte va el header, con su título y su barra de navegación. -->
     <header>
-        <!-- Acá va la barra de navegación como lista desordenada, los que tienen enlaces relativos son el de inicio, el de clientes y el de contacto. Los que tienen enlaces internos son los de sobre nosotros; y los servicios y su menú desplegable -->
-        <nav class="header__nav">
-            <!-- Logo, le hago un div para que no se seleccione toda su área como pointer en el mouse -->
-            <div class="header__chico">
-                <div class="header__nav--foto">
-                    <a href="index.html"><img class="logo" src="./assets/img/logo.png" alt="Logo"></a>
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html"><img class="logo" src="./assets/img/logo.png" alt="Logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#nosotros">Sobre nosotros</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Servicios
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#desarrollo">Desarrollo Web</a></li>
+                                <li><a class="dropdown-item" href="#camarasIP">Cámaras</a></li>
+                                <li><a class="dropdown-item" href="#gps">GPS</a></li>
+                                <li><a class="dropdown-item" href="#soporteTi">Soporte TI</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#nosotros">Contacto</a>
+                        </li>
+                    </ul>
                 </div>
-                <!-- Fin del logo -->
-                <div id="iconoMobile">
-                    <i class="fa-solid fa-bars fa-xl"></i>
-                </div>
-            </div>
-            <div class="header__nav--ulFlexContenedor jsMenu">
-                <ul class="header__nav--ulFlex">
-                    <li><a class= "header__nav--link" href="#">Home</a><hr></li>
-                    <li><a class= "header__nav--link">Sobre nosotros</a><hr></li>
-                    <li><a class= "header__nav--link">Desarrollo Web</a><hr></li>
-                    <li><a class= "header__nav--link">Cámaras</a><hr></li>
-                    <li><a class= "header__nav--link">GPS</a><hr></li>
-                    <li><a class= "header__nav--link" href="#soporteTi">Soporte TI</a><hr></li>
-                    <li><a class= "header__nav--link" href="#contacto">Contacto</a><hr></li>
-                </ul>
             </div>
         </nav>
-        <!-- Fin de la barra de navegación -->
         <!-- Acá va el hero -->
-        <section class="hero">
-            <article class="hero__texto">
-                <h1 class="hero__texto--titulo">Websupport</h1>
-                <h1 class="hero__texto--titulo">Servicios</h1>
-                <h1 class="hero__texto--titulo">Tecnológicos</h1>
-            </article>
-            <img class="heroFoto" src="./assets/img/hero.png" alt="Imagen de Servicio Técnico">
-        </section>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-6">
+                    <h1 class="hero__texto--titulo text-center">Websupport</h1>
+                    <h1 class="hero__texto--titulo text-center">Servicios</h1>
+                    <h1 class="hero__texto--titulo text-center">Tecnológicos</h1>
+                </div>
+                <div class="col-xl-6">
+                    <img class="img-fluid" src="./assets/img/hero.png" alt="Imagen de Servicio Técnico">
+                </div>
+            </div>
+        </div>
         <!-- Fin del hero -->
     </header>
     <!-- Cierre del header -->
@@ -56,148 +67,95 @@
         <!-- Primer bloque horizontal de Sobre Nosotros-->
         <section id="nosotros" class="servicios">
             <article class="nosotros__textos">
-                <h1 class="nosotros__textos--titulo">Sobre nosotros</h1>
-                <p class="nosotros__textos--descripcion">Somos una empresa dedicada a todo lo relacionado con las tecnologías de la información, desde sitios web, apps, SEO, hasta soporte técnico o instalación de cámaras <br> Llevamos en el rubro hace años, y nos encanta lo que hacemos, además de que nos hemos aliado con empresas privadas, y con el Gobierno. Te esperaremos felices en nuestras oficinas para darte una cálida bienvenida</p>
+                <h1 class="nosotros__textos--titulo text-center">Sobre nosotros</h1>
+                <p class="nosotros__textos--descripcion text-center">Somos una empresa dedicada a todo lo relacionado con las tecnologías de la información, desde sitios web, apps, SEO, hasta soporte técnico o instalación de cámaras <br> Llevamos en el rubro hace años, y nos encanta lo que hacemos, además de que nos hemos aliado con empresas privadas, y con el Gobierno. Te esperaremos felices en nuestras oficinas para darte una cálida bienvenida</p>
             </article>
         </section>
         <!-- Fin de Sobre Nosotros-->
         <!-- A partir de aquí, comienzan secciones de doble columna, una con textos y otra con imágenes al otro lado, comienzo con un id para hacer el enlace interno desde el navbar a cada parte del submenú -->
-        <section id="desarrollo" class="servicios">
-            <article data-aos="fade-right" class="servicios__textos">
-                <h1>Desarrollo web <u>personalizadas</u> al cliente</h1>
-                <p>Diseñamos sitios webs personalizados con altos estándares de calidad que se adaptan a los objetivos de su negocio, creando una propuesta de valor y orientado a generar una grata experiencia de navegación a sus usuarios. <br> Realizamos toda la gestión en la inscripción de su dominio en Nic Chile, creamos su cuenta de Webhosting y configuramos su correo corporativo.</p>
-                <h2>Entre nuestros servicios destacan:</h2>
-                <ul>
-                    <li>Aplicaciones Web: Desarrollamos sistemas de agenda online, reserva de horas y códigos QR para clínicas, hoteles, restaurantes, cafeterías, peluquerías, talleres mecánicos, entre otros comercios.</li>
-                    <li>Tienda Online: Digitalizamos su negocio para que venda online las 24 horas del día, diseñamos su catálogo, carrito de compras, sincronizamos su inventario en base de datos o creamos uno nuevo actualizable con códigos de barra, e integramos su web con WebPay by Transbank y/o MercadoPago; medios de pago que cumplen con altos estándares de seguridad en Internet, también es posible solicitar otro medio de pago de su preferencia. </li>
-                    <li>Posicionamiento Web: Optimizamos el rendimiento de su sitio web en motores de búsqueda o SEO con un conjunto de acciones orientadas a mejorar el posicionamiento en la lista de resultados de Google, Bing, entre otros buscadores en Internet.</li>
-                </ul>
-            </article>
-            <article data-aos="fade-left" class="servicios__foto--contenedor">
-                <img class="servicios__foto--contenido" src="./assets/img/web.png" alt="Imagen de un computador">
-            </article>
+        <section id="desarrollo" class="container">
+            <div class="row">
+                <article data-aos="fade-right" class="servicios__textos col-xl-6">
+                    <h1 class="text-center">Desarrollo web <u>personalizadas</u> al cliente</h1>
+                    <p class="text-center">Diseñamos sitios webs personalizados con altos estándares de calidad que se adaptan a los objetivos de su negocio, creando una propuesta de valor y orientado a generar una grata experiencia de navegación a sus usuarios. <br> Realizamos toda la gestión en la inscripción de su dominio en Nic Chile, creamos su cuenta de Webhosting y configuramos su correo corporativo.</p>
+                    <h2 class="text-center">Entre nuestros servicios destacan:</h2>
+                    <ul>
+                        <li>Aplicaciones Web: Desarrollamos sistemas de agenda online, reserva de horas y códigos QR para clínicas, hoteles, restaurantes, cafeterías, peluquerías, talleres mecánicos, entre otros comercios.</li>
+                        <li>Tienda Online: Digitalizamos su negocio para que venda online las 24 horas del día, diseñamos su catálogo, carrito de compras, sincronizamos su inventario en base de datos o creamos uno nuevo actualizable con códigos de barra, e integramos su web con WebPay by Transbank y/o MercadoPago; medios de pago que cumplen con altos estándares de seguridad en Internet, también es posible solicitar otro medio de pago de su preferencia. </li>
+                        <li>Posicionamiento Web: Optimizamos el rendimiento de su sitio web en motores de búsqueda o SEO con un conjunto de acciones orientadas a mejorar el posicionamiento en la lista de resultados de Google, Bing, entre otros buscadores en Internet.</li>
+                    </ul>
+                </article>
+                <article data-aos="fade-left" class="servicios__foto--contenedor col-xl-6">
+                    <img class="servicios__foto--contenido" src="./assets/img/web.png" alt="Imagen de un computador">
+                </article>
+            </div>
         </section>
         <!-- Fin de sección de desarrollo web -->
         <!-- Comienzo de sección de cámaras ip -->
-        <section id="camarasIp" class="servicios">
-            <article data-aos="fade-right" class="servicios__foto--contenedor">
-                <img class="servicios__foto--contenido" src="./assets/img/ip.png" alt="Imagen de unas cámaras">
-            </article>
-            <article data-aos="fade-left" class="servicios__textos">
-                <h1>Seguridad IP, mantenga <u>protegida</u> su propiedad privada</h1>
-                <p>Instalamos sistemas de Video-vigilancia IP para su hogar, empresa y/o compañía con monitoreo remoto mediante su Smartphone, Tablet, PC/MAC. <br> Cámaras HD de alta calidad visual, resistentes a la intemperie y lluvia con detección de movimientos y audio disuasivo.</p>
-            </article>
+        <section id="camarasIp" class="container">
+            <div class="row">
+                <article data-aos="fade-right" class="servicios__foto--contenedor col-xl-6">
+                    <img class="servicios__foto--contenido" src="./assets/img/ip.png" alt="Imagen de unas cámaras">
+                </article>
+                <article data-aos="fade-left" class="servicios__textos col-xl-6">
+                    <h1 class="text-center">Seguridad IP, mantenga <u>protegida</u> su propiedad privada</h1>
+                    <p class="text-center">Instalamos sistemas de Video-vigilancia IP para su hogar, empresa y/o compañía con monitoreo remoto mediante su Smartphone, Tablet, PC/MAC. <br> Cámaras HD de alta calidad visual, resistentes a la intemperie y lluvia con detección de movimientos y audio disuasivo.</p>
+                </article>
+            </div>
         </section>
         <!-- Fin de la sección de cámaras ip -->
         <!-- Comienzo de sección de soluciones gps -->
-        <section id="gps" class="servicios">
-            <article data-aos="fade-right" class="servicios__textos">
-                <h1>Soluciones GPS</h1>
-                <p>Ofrecemos sistemas de rastreo satelital GPS para vehículos, personas, adulto mayor, niños y mascotas. Instalamos dispositivos GeoTracker de alta calidad y tecnología con monitoreo y control desde su Smartphone. Proteja a sus seres queridos de la creciente delincuencia. No pierda de vista sus bienes, activos e inversión.</p>
-            </article>
-            <article data-aos="fade-left" class="servicios__foto--contenedor">
-                <img class="servicios__foto--contenido" src="./assets/img/gps.png" alt="Imágenes de un mapa en celular y otro en papel">
-            </article>
+        <section id="gps" class="container">
+            <div class="row">
+                <article data-aos="fade-right" class="servicios__textos col-xl-6">
+                    <h1 class="text-center">Soluciones GPS</h1>
+                    <p class="text-center">Ofrecemos sistemas de rastreo satelital GPS para vehículos, personas, adulto mayor, niños y mascotas. Instalamos dispositivos GeoTracker de alta calidad y tecnología con monitoreo y control desde su Smartphone. Proteja a sus seres queridos de la creciente delincuencia. No pierda de vista sus bienes, activos e inversión.</p>
+                </article>
+                <article data-aos="fade-left" class="servicios__foto--contenedor col-xl-6">
+                    <img class="servicios__foto--contenido" src="./assets/img/gps.png" alt="Imágenes de un mapa en celular y otro en papel">
+                </article>
+            </div>
         </section>
         <!-- Fin de sección de soluciones gps -->
         <!-- Comienzo de sección de Soporte TI -->
-        <section id="soporteTi" class="servicios">
-            <article data-aos="fade-right" class="servicios__foto--contenedor">
-                <img class="servicios__foto--contenido" src="./assets/img/ti.png" alt="Imagen de herramientas y un computador">
-            </article>
-            <article data-aos="fade-left" class="servicios__textos">
-                <h1>Soporte TI</h1>
-                <p>Asistencia técnica presencial y/o remota especializado en Hardware y Software para la continuidad operativa del equipamiento de tu hogar, empresa u organización. <br> Contamos con alta capacidad de respuesta y eficacia en resolver sus requerimientos a tiempo.</p>
-            </article>
+        <section id="soporteTi" class="container">
+            <div class="row">
+                <article data-aos="fade-right" class="servicios__foto--contenedor col-xl-6">
+                    <img class="servicios__foto--contenido" src="./assets/img/ti.png" alt="Imagen de herramientas y un computador">
+                </article>
+                <article data-aos="fade-left" class="servicios__textos col-xl-6">
+                    <h1 class="text-center">Soporte TI</h1>
+                    <p class="text-center">Asistencia técnica presencial y/o remota especializado en Hardware y Software para la continuidad operativa del equipamiento de tu hogar, empresa u organización. <br> Contamos con alta capacidad de respuesta y eficacia en resolver sus requerimientos a tiempo.</p>
+                </article>
+            </div>
         </section>
         <!-- Fin de sección de Soporte TI -->
         <!-- Fin de secciones de servicios de doble columna -->
         <!-- Comienzo de sección de seguridad -->
-        <section id="seguridad">
-            <article>
-                <h3 class="seguridad__subtitulo">COMPROMETIDOS CON TU SEGURIDAD</h3>
-                <h1 class="seguridad__titulo">Nos tomamos tu seguridad <u> muy en serio</u></h1>
+        <section id="seguridad" class="container-fluid">
+            <article class="row">
+                <h3 class="seguridad__subtitulo text-center">COMPROMETIDOS CON TU SEGURIDAD</h3>
+                <h1 class="seguridad__titulo text-center">Nos tomamos tu seguridad <u> muy en serio</u></h1>
             </article>
-            <article data-aos="fade-up" class="seguridad__flex">
-                <div class="seguridad__flex--columna">
+            <article class="seguridad__flex row">
+                <div data-aos="fade-up" class="seguridad__flex--columna col-xl-4">
                     <img class="seguridad__flex--columnaImagen" src="./assets/svg/seguro.svg" alt="Imagen de escudo de seguridad">
-                    <h4 class="seguridad__flex--titulo">Protección de datos</h4>
-                    <p class="seguridad__flex--texto">Tus datos están en todo momento protegidos, desde su recolección, almacenamiento y manejo hasta su destrucción o archivado. Tus valiosos datos nunca pasaran peligro en nuestras rigurosas manos.</p>
+                    <h4 class="seguridad__flex--titulo text-center">Protección de datos</h4>
+                    <p class="seguridad__flex--texto text-center">Tus datos están en todo momento protegidos, desde su recolección, almacenamiento y manejo hasta su destrucción o archivado. Tus valiosos datos nunca pasaran peligro en nuestras rigurosas manos.</p>
                 </div>
-                <div data-aos="fade-up" class="seguridad__flex--columna">
+                <div data-aos="fade-up" class="seguridad__flex--columna col-xl-4">
                     <img class="seguridad__flex--columnaImagen" src="./assets/svg/seguro.svg" alt="Imagen de escudo de seguridad">
-                    <h4 class="seguridad__flex--titulo">Plataformas de pago seguro</h4>
-                    <p class="seguridad__flex--texto">Trabajamos con las mejores pasarelas de pago para hacer las compras de tus clientes las más seguras y accesibles posibles ¿MercadoPago, TransBank, Mach o Servipag? Te ayudamos.</p>
+                    <h4 class="seguridad__flex--titulo text-center">Plataformas de pago seguro</h4>
+                    <p class="seguridad__flex--texto text-center">Trabajamos con las mejores pasarelas de pago para hacer las compras de tus clientes las más seguras y accesibles posibles ¿MercadoPago, TransBank, Mach o Servipag? Te ayudamos.</p>
                 </div>
-                <div data-aos="fade-up" class="seguridad__flex--columna">
+                <div data-aos="fade-up" class="seguridad__flex--columna col-xl-4">
                     <img class="seguridad__flex--columnaImagen" src="./assets/svg/seguro.svg" alt="Imagen de escudo de seguridad">
-                    <h4 class="seguridad__flex--titulo">Tus sitios seguros y supervisados 24/7</h4>
-                    <p class="seguridad__flex--texto">Nos preocupamos por la seguridad de tus sitios, por lo tanto, los aseguramos con certificado SSL, un algoritmo de hash seguro de 256 bits y encriptado RSA, además de usar un firewall adicional.</p>
+                    <h4 class="seguridad__flex--titulo text-center">Tus sitios seguros y supervisados 24/7</h4>
+                    <p class="seguridad__flex--texto text-center">Nos preocupamos por la seguridad de tus sitios, por lo tanto, los aseguramos con certificado SSL, un algoritmo de hash seguro de 256 bits y encriptado RSA, además de usar un firewall adicional.</p>
                 </div>
             </article>
         </section>
         <!-- Fin de sección de seguridad -->
-        <section id="contacto" class="formulario"> <!-- En esta sección incluyo tanto el formulario como su introducción -->
-            <article data-aos="fade-up" class="formulario--flex"> <!-- En este artículo incluyo a todo el formulario -->
-                <h1>Contáctanos!</h1>
-                <p>Estaremos felices de escucharte! <br> Tan solo rellena los siguientes datos solicitados: </p>
-                <form action="" method="get" enctype="text/plain">
-                    <fieldset> <!-- En esta parte del formulario pido la información personal de contacto -->
-                        <legend>Información personal</legend>
-                        <div class="inputAnimado">
-                            <input type="text" name="nombres" placeholder="Nombres" id="Nombre" required>
-                            <label for="Nombre">
-                                <span class="icono"><i class="fa-solid fa-file-signature"></i></span>
-                                Nombres (Obligatorio): 
-                            </label>
-                        </div>
-                        <div class="inputAnimado">
-                            <input type="text" name="apellidos" placeholder="Apellidos" id="apellido" required>
-                            <label for="apellido">
-                                <span class="icono"><i class="fa-solid fa-file-signature"></i></span>
-                                Apellidos (Obligatorio): 
-                            </label>
-                        </div>
-                        <div class="inputAnimado">
-                            <input type="email" name="correo" placeholder="tucorreo@tuproovedor.com" id="correo" required>
-                            <label for="correo">
-                                <span class="icono"><i class="fa-solid fa-envelope"></i></span>
-                                Correo (Obligatorio): 
-                            </label>
-                        </div>
-                        <div class="inputAnimado">
-                            <input type="tel" name="numero" id="celular" placeholder="+56912345678">
-                            <label for="celular">
-                                <span class="icono"><i class="fa-solid fa-phone"></i></span>
-                                Número telefónico: 
-                            </label>
-                        </div>
-                    </fieldset>
-                    <!-- Fin de petición de información personal de contacto -->
-                    <fieldset> <!-- En esta parte del formulario pido la información acerca del motivo de contacto -->
-                        <legend>Tema</legend>
-                        <div>
-                            <label for="asunto">Asunto (Obligatorio)</label>
-                            <select name="Asunto" id="asunto" required>
-                                <option value="" disabled selected>--Elige el asunto--</option>
-                                <option value="web">Desarrollo Web</option>
-                                <option value="camaras">Seguridad IP</option>
-                                <option value="gps">Soluciones GPS</option>
-                                <option value="soporte">Soporte TI</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label for="Contenido"></label>
-                            <textarea name="detalles" id="Contenido" cols="30" rows="10" required placeholder="Ingresa los detalles*: "></textarea>
-                        </div>
-                        <div>
-                            <input type="submit" value="Enviar">
-                        </div>
-                    </fieldset> <!-- Fin de petición acerca del motivo de contacto -->
-                </form>
-            </article>
-            <!-- Fin del formulario -->
-        </section>
     </main>
         <!-- Fin de la información de mi página -->
     <!-- Comienzo del footer -->
