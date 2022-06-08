@@ -11,3 +11,7 @@ main>* {
 main > :nth-child(even){
     background-color: #6980A22B;
 }
+
+header {
+    background-image: url("./assets/img/fondoHero.jpg");
+}
