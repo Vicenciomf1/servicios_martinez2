@@ -23,24 +23,24 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-center">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            <a class="nav-link active" aria-current="page" href="#">Home</a><hr>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#nosotros">Sobre nosotros</a>
+                            <a class="nav-link" href="#nosotros">Sobre nosotros</a><hr>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Servicios
-                            </a>
+                            </a><hr>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="#desarrollo">Desarrollo Web</a></li>
-                                <li><a class="dropdown-item" href="#camarasIP">Cámaras</a></li>
+                                <li><a class="dropdown-item" href="#camarasIp">Cámaras</a></li>
                                 <li><a class="dropdown-item" href="#gps">GPS</a></li>
                                 <li><a class="dropdown-item" href="#soporteTi">Soporte TI</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#nosotros">Contacto</a>
+                            <a class="nav-link" href="#nosotros">Contacto</a><hr>
                         </li>
                     </ul>
                 </div>
@@ -79,11 +79,44 @@
                     <h1 class="text-center">Desarrollo web <u>personalizadas</u> al cliente</h1>
                     <p class="text-center">Diseñamos sitios webs personalizados con altos estándares de calidad que se adaptan a los objetivos de su negocio, creando una propuesta de valor y orientado a generar una grata experiencia de navegación a sus usuarios. <br> Realizamos toda la gestión en la inscripción de su dominio en Nic Chile, creamos su cuenta de Webhosting y configuramos su correo corporativo.</p>
                     <h2 class="text-center">Entre nuestros servicios destacan:</h2>
-                    <ul>
-                        <li>Aplicaciones Web: Desarrollamos sistemas de agenda online, reserva de horas y códigos QR para clínicas, hoteles, restaurantes, cafeterías, peluquerías, talleres mecánicos, entre otros comercios.</li>
-                        <li>Tienda Online: Digitalizamos su negocio para que venda online las 24 horas del día, diseñamos su catálogo, carrito de compras, sincronizamos su inventario en base de datos o creamos uno nuevo actualizable con códigos de barra, e integramos su web con WebPay by Transbank y/o MercadoPago; medios de pago que cumplen con altos estándares de seguridad en Internet, también es posible solicitar otro medio de pago de su preferencia. </li>
-                        <li>Posicionamiento Web: Optimizamos el rendimiento de su sitio web en motores de búsqueda o SEO con un conjunto de acciones orientadas a mejorar el posicionamiento en la lista de resultados de Google, Bing, entre otros buscadores en Internet.</li>
-                    </ul>
+                    <div class="accordion" id="acordeonServicios">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="webTitulo">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#colapsarWeb" aria-expanded="true" aria-controls="colapsarWeb">
+                                    Aplicaciones Web:
+                                </button>
+                            </h2>
+                            <div id="colapsarWeb" class="accordion-collapse collapse show" aria-labelledby="webTitulo" data-bs-parent="#acordeonServicios">
+                                <div class="accordion-body">
+                                    <p>Desarrollamos sistemas de agenda online, reserva de horas y códigos QR para clínicas, hoteles, restaurantes, cafeterías, peluquerías, talleres mecánicos, entre otros comercios.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="tiendaTitulo">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#colapsarTienda" aria-expanded="true" aria-controls="colapsarTienda">
+                                    Tienda Online:
+                                </button>
+                            </h2>
+                            <div id="colapsarTienda" class="accordion-collapse collapse show" aria-labelledby="tiendaTitulo" data-bs-parent="#acordeonServicios">
+                                <div class="accordion-body">
+                                    <p>Digitalizamos su negocio para que venda online las 24 horas del día, diseñamos su catálogo, carrito de compras, sincronizamos su inventario en base de datos o creamos uno nuevo actualizable con códigos de barra, e integramos su web con WebPay by Transbank y/o MercadoPago; medios de pago que cumplen con altos estándares de seguridad en Internet, también es posible solicitar otro medio de pago de su preferencia. </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="seoTitulo">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#colapsarSeo" aria-expanded="true" aria-controls="colapsarSeo">
+                                    Posicionamiento en motores de búsqueda:
+                                </button>
+                            </h2>
+                            <div id="colapsarSeo" class="accordion-collapse collapse show" aria-labelledby="seoTitulo" data-bs-parent="#acordeonServicios">
+                                <div class="accordion-body">
+                                    <p> Optimizamos el rendimiento de su sitio web en motores de búsqueda o SEO con un conjunto de acciones orientadas a mejorar el posicionamiento en la lista de resultados de Google, Bing, entre otros buscadores en Internet.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </article>
                 <article data-aos="fade-left" class="servicios__foto--contenedor col-xl-6">
                     <img class="servicios__foto--contenido img-fluid rounded mx-auto d-block" src="./assets/img/web.png" alt="Imagen de un computador">
