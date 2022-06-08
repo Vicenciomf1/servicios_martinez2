@@ -1,3 +1,13 @@
-img {
-    width: 200px;
+.flexcentrar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main>* {
+    margin: 15vh 0vw;
+}
+
+main > :nth-child(even){
+    background-color: #6980A22B;
 }
