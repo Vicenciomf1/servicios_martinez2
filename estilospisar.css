@@ -4,6 +4,29 @@
     justify-content: center;
 }
 
+.centrarTodo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.centrarTodo * {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-pesadote {
+    width: 2.5rem;
+}
+
+.textoChico {
+    font-size: 0.9rem;
+}
+
+.bg-mio {
+    background-color: #6980A22B;
+}
+
 main>* {
     margin: 15vh 0vw;
 }
